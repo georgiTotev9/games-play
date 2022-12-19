@@ -1,9 +1,9 @@
 function App() {
   return (
-    <div classNameName="App">
+    <div className="App">
       <header>
            
-            <h1><a classNameName="home" href="#">GamesPlay</a></h1>
+            <h1><a className="home" href="#">GamesPlay</a></h1>
             <nav>
                 <a href="#">All games</a>
                 <div id="user">
@@ -23,49 +23,49 @@ function App() {
 
         <section id="welcome-world">
 
-            <div classNameName="welcome-message">
+            <div className="welcome-message">
                 <h2>ALL new games are</h2>
                 <h3>Only in GamesPlay</h3>
             </div>
-            <img src="./images/four_slider_img01.png" alt="hero"/>
+            <img src="/images/four_slider_img01.png" alt="hero"/>
 
             <div id="home-page">
                 <h1>Latest Games</h1>
 
-                <div classNameName="game">
-                    <div classNameName="image-wrap">
-                        <img src="./images/CoverFire.png"/>
+                <div className="game">
+                    <div className="image-wrap">
+                        <img src="/images/CoverFire.png"/>
                     </div>
                     <h3>Cover Fire</h3>
                     <div className="rating">
                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                     </div>
-                    <div classNameName="data-buttons">
-                        <a href="#" classNameName="btn details-btn">Details</a>
+                    <div className="data-buttons">
+                        <a href="#" className="btn details-btn">Details</a>
                     </div>
                 </div>
-                <div classNameName="game">
-                    <div classNameName="image-wrap">
-                        <img src="./images/ZombieLang.png"/>
+                <div className="game">
+                    <div className="image-wrap">
+                        <img src="/images/ZombieLang.png"/>
                     </div>
                     <h3>Zombie Lang</h3>
-                    <div classNameName="rating">
+                    <div className="rating">
                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                     </div>
-                    <div classNameName="data-buttons">
-                        <a href="#" classNameName="btn details-btn">Details</a>
+                    <div className="data-buttons">
+                        <a href="#" className="btn details-btn">Details</a>
                     </div>
                 </div>
-                <div classNameName="game">
-                    <div classNameName="image-wrap">
-                        <img src="./images/MineCraft.png"/>
+                <div className="game">
+                    <div className="image-wrap">
+                        <img src="/images/MineCraft.png"/>
                     </div>
                     <h3>MineCraft</h3>
-                    <div classNameName="rating">
+                    <div className="rating">
                         <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                     </div>
-                    <div classNameName="data-buttons">
-                        <a href="#" classNameName="btn details-btn">Details</a>
+                    <div className="data-buttons">
+                        <a href="#" className="btn details-btn">Details</a>
                     </div>
                 </div>
 
@@ -226,7 +226,7 @@ function App() {
      
             <div className="allGames">
                 <div className="allGames-info">
-                    <img src="./images/avatar-1.jpg" />
+                    <img src="/images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>Cover Fire</h2>
                     <a href="#" className="details-button">Details</a>
@@ -235,7 +235,7 @@ function App() {
             </div>
             <div className="allGames">
                 <div className="allGames-info">
-                    <img src="./images/avatar-1.jpg" />
+                    <img src="/images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>Zombie lang</h2>
                     <a href="#" className="details-button">Details</a>
@@ -244,7 +244,7 @@ function App() {
             </div>
             <div className="allGames">
                 <div className="allGames-info">
-                    <img src="./images/avatar-1.jpg" />
+                    <img src="/images/avatar-1.jpg" />
                     <h6>Action</h6>
                     <h2>MineCraft</h2>
                     <a href="#" className="details-button">Details</a>
