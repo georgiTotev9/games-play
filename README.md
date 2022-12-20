@@ -1,10 +1,14 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Small React App for Educational Purposes
+- Completed on: 04.12.2022
+- Uploaded on: 20.12.2022
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run server`
+
+Runs the server on http://localhost:3030.
 
 ### `npm start`
 
