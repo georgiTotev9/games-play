@@ -1,15 +1,35 @@
-import Header from "./components/Header";
+import { useState } from 'react';
+
+import Header from './components/Header';
+import WelcomeWorld from './components/WelcomeWorld';
+import GameCatalog from './components/GameCatalog';
+import Login from './components/Login';
+import CreateGame from './components/CreateGame';
+import Register from './components/Register';
 
 function App() {
-  return (
-    <div id="box">
-        <Header />
-        <main id="main-content">
-        </main>
+    const [page, setPage] = useState('/home');
 
-        
-    </div>
-  );
+    const routes = {
+        '/': <WelcomeWorld />,
+        '/catalog': <GameCatalog />,
+        '/login': <Login />,
+        '/create': <CreateGame />,
+        '/register': <Register />,
+    };
+
+    const navigationChangeHandler = (path) => {
+        setPage(path);
+    };
+
+    return (
+        <div id='box'>
+            <Header navigationChangeHandler={navigationChangeHandler} />
+            <main id='main-content'>
+                {routes[page] || <h2>Not found! 404</h2>}
+            </main>
+        </div>
+    );
 }
 
 export default App;
