@@ -1,4 +1,36 @@
+import { useState, useEffect } from 'react';
+import * as gameService from '../services/gameService';
+
+const GameCard = ({ game }) => (
+    <div className='game'>
+        <div className='image-wrap'>
+            <img src={game.imageUrl} />
+        </div>
+        <h3>{game.title}</h3>
+        <div className='rating'>
+            <span>☆</span>
+            <span>☆</span>
+            <span>☆</span>
+            <span>☆</span>
+            <span>☆</span>
+        </div>
+        <div className='data-buttons'>
+            <a href={`/details/${game._id}`} className='btn details-btn'>
+                Details
+            </a>
+        </div>
+    </div>
+);
+
 const WelcomeWorld = () => {
+    const [games, setGames] = useState([]);
+
+    useEffect(() => {
+        gameService.getAll().then((games) => {
+            setGames(games);
+        });
+    }, []);
+
     return (
         <section id='welcome-world'>
             <div className='welcome-message'>
@@ -10,62 +42,11 @@ const WelcomeWorld = () => {
             <div id='home-page'>
                 <h1>Latest Games</h1>
 
-                <div className='game'>
-                    <div className='image-wrap'>
-                        <img src='/images/CoverFire.png' />
-                    </div>
-                    <h3>Cover Fire</h3>
-                    <div className='rating'>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                    </div>
-                    <div className='data-buttons'>
-                        <a href='#' className='btn details-btn'>
-                            Details
-                        </a>
-                    </div>
-                </div>
-                <div className='game'>
-                    <div className='image-wrap'>
-                        <img src='/images/ZombieLang.png' />
-                    </div>
-                    <h3>Zombie Lang</h3>
-                    <div className='rating'>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                    </div>
-                    <div className='data-buttons'>
-                        <a href='#' className='btn details-btn'>
-                            Details
-                        </a>
-                    </div>
-                </div>
-                <div className='game'>
-                    <div className='image-wrap'>
-                        <img src='/images/MineCraft.png' />
-                    </div>
-                    <h3>MineCraft</h3>
-                    <div className='rating'>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                        <span>☆</span>
-                    </div>
-                    <div className='data-buttons'>
-                        <a href='#' className='btn details-btn'>
-                            Details
-                        </a>
-                    </div>
-                </div>
-
-                <p className='no-articles'>No games yet</p>
+                {games.length > 0 ? (
+                    games.map((game) => <GameCard key={game._id} game={game} />)
+                ) : (
+                    <p className='no-articles'>No games yet</p>
+                )}
             </div>
         </section>
     );
