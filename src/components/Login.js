@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 
-const Login = () => {
+
+
+const Login = ({ history }) => {
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        history.push('/');
+    };
+    
     return (
         <section id="login-page" className="auth">
-            <form id="login">
+            <form id="login" onSubmit={submitHandler}>
 
                 <div className="container">
                     <div className="brand-logo"></div>
