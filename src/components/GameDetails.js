@@ -3,7 +3,7 @@ import * as gameService from '../services/gameService';
 
 const GameDetails = ({ match }) => {
     let id = match.params.gameId;
-    const [game, setGame] = useState(null);
+    const [game, setGame] = useState({});
 
     useEffect(() => {
         gameService.getOne(id).then((game) => setGame(game));
