@@ -1,4 +1,4 @@
-# Small React App for Educational Purposes
+# Small Demo React App for Educational Purposes
 - Completed on: 04.12.2022
 - Uploaded on: 20.12.2022
 
