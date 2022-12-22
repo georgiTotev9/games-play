@@ -7,25 +7,12 @@ import GameCatalog from './components/GameCatalog/GameCatalog';
 import Login from './components/Login';
 import CreateGame from './components/CreateGame';
 import Register from './components/Register';
+import GameDetails from './components/GameDetails';
 
 function App() {
-    // const [page, setPage] = useState('/home');
-
-    // const routes = {
-    //     '/': < />,
-    //     '/catalog': < />,
-    //     '/login': <Login />,
-    //     '/create': <CreateGame />,
-    //     '/register': <Register />,
-    // };
-
-    // const navigationChangeHandler = (path) => {
-    //     setPage(path);
-    // };
-
     return (
         <div id='box'>
-            <Route component={Header} />
+            <Header />
             <main id='main-content'>
                 <Switch>
                     <Route path='/' exact component={WelcomeWorld} />
@@ -33,6 +20,7 @@ function App() {
                     <Route path='/login' exact component={Login} />
                     <Route path='/create' exact component={CreateGame} />
                     <Route path='/register' exact component={Register} />
+                    <Route path='/details/:gameId' exact component={GameDetails} />
                 </Switch>
             </main>
         </div>

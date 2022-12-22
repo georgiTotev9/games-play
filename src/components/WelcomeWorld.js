@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import * as gameService from '../services/gameService';
 
 const GameCard = ({ game }) => (
@@ -15,9 +16,9 @@ const GameCard = ({ game }) => (
             <span>☆</span>
         </div>
         <div className='data-buttons'>
-            <a href={`/details/${game._id}`} className='btn details-btn'>
+            <Link to={`/details/${game._id}`} className='btn details-btn'>
                 Details
-            </a>
+            </Link>
         </div>
     </div>
 );
